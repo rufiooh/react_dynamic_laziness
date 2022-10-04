@@ -1,3 +1,9 @@
+# The App
+
+Currently the lazy components are part of a map, where they get loaded dynamically, depending on the passed map key.
+
+This - even when preloaded - causes a slight flickering when the component gets injected the first time (?help! ^^)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
