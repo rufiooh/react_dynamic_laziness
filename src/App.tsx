@@ -26,11 +26,6 @@ const FlickerAmplifier = styled.div`
   background: black;
 `;
 
-const UglyLoading = styled.div`
-  background: red;
-  padding: 2rem;
-`;
-
 function App() {
   const [isShowingLazyComponent, setIsShowingLazyComponent] = useState(false);
   const [oneOrTwo, setOneOrTwo] = useState<"test1" | "test2">("test1");
