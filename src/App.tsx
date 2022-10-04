@@ -56,14 +56,8 @@ function App() {
         component gets injected the first time
       </p>
       <h1>Lazy Loaded Component Below:</h1>
-      <React.Suspense fallback={<UglyLoading>Loading</UglyLoading>}>
-        {isShowingLazyComponent ? (
-          <>
-            <LazyComp />
-          </>
-        ) : (
-          <h4>not yet</h4>
-        )}
+      <React.Suspense fallback={<></>}>
+        {isShowingLazyComponent ? <LazyComp /> : <h4>not yet</h4>}
       </React.Suspense>
       <StyledButton
         disabled={isShowingLazyComponent}
@@ -82,6 +76,7 @@ function App() {
       >
         Switch Component {isPreloaded ? "" : "NOT"} Preloaded
       </StyledButton>
+
       <FlickerAmplifier />
     </StyledApp>
   );

@@ -5,8 +5,13 @@ const StyledH2 = styled.h2`
   color: blue;
 `;
 
-const LazyComponent = () => {
-  return <StyledH2>Lazy Loaded Component 2</StyledH2>;
+const LazyComponent2 = () => {
+  return (
+    <div>
+      <StyledH2>Lazy Loaded Component 2</StyledH2>
+      <h1>HELLO WORLD</h1>
+    </div>
+  );
 };
 
-export default LazyComponent;
+export default LazyComponent2;
