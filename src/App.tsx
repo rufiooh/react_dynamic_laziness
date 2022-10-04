@@ -26,6 +26,11 @@ const FlickerAmplifier = styled.div`
   background: black;
 `;
 
+const UglyLoading = styled.div`
+  background: red;
+  padding: 2rem;
+`;
+
 function App() {
   const [isShowingLazyComponent, setIsShowingLazyComponent] = useState(false);
   const [oneOrTwo, setOneOrTwo] = useState<"test1" | "test2">("test1");
@@ -51,7 +56,7 @@ function App() {
         component gets injected the first time
       </p>
       <h1>Lazy Loaded Component Below:</h1>
-      <React.Suspense>
+      <React.Suspense fallback={<UglyLoading>Loading</UglyLoading>}>
         {isShowingLazyComponent ? (
           <>
             <LazyComp />
