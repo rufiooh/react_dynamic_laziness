@@ -21,6 +21,11 @@ const StyledButton = styled.button`
   margin: 1rem;
 `;
 
+const FlickerAmplifier = styled.div`
+  height: 300px;
+  background: black;
+`;
+
 function App() {
   const [isShowingLazyComponent, setIsShowingLazyComponent] = useState(false);
   const [oneOrTwo, setOneOrTwo] = useState<"test1" | "test2">("test1");
@@ -64,6 +69,7 @@ function App() {
       >
         Switch Component {isPreloaded ? "" : "NOT"} Preloaded
       </StyledButton>
+      <FlickerAmplifier />
     </StyledApp>
   );
 }
