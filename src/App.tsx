@@ -42,6 +42,14 @@ function App() {
   return (
     <StyledApp>
       <div>(refresh page to reset)</div>
+      <p>
+        Currently the lazy components are part of a map, where they get loaded
+        dynamically, depending on the passed map key.
+      </p>
+      <p>
+        This - even when preloaded - causes a slight flickering when the
+        component gets injected the first time
+      </p>
       <h1>Lazy Loaded Component Below:</h1>
       <React.Suspense>
         {isShowingLazyComponent ? (
